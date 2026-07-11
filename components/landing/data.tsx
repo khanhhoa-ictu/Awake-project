@@ -8,38 +8,19 @@ export const navItems = [
   "FAQ",
 ];
 
-export const partnerLogos = [
-  {
-    name: "Logoipsum",
-    variant: "spark",
-    tone: "text-orange-500",
-  },
-  {
-    name: "logoipsum",
-    variant: "orbit",
-    tone: "text-zinc-900 dark:text-white",
-  },
-  {
-    name: "Logoipsum University",
-    variant: "shield",
-    tone: "text-emerald-500",
-  },
-  {
-    name: "logoipsum",
-    variant: "nodes",
-    tone: "text-zinc-900 dark:text-white",
-  },
-  {
-    name: "Logoipsum",
-    variant: "bolt",
-    tone: "text-indigo-600 dark:text-indigo-400",
-  },
-];
+export const listLogo = [
+    "/images/logo1.png",
+    "/images/logo2.png",
+    "/images/logo3.png",
+    "/images/logo4.png",
+    "/images/logo5.png",
 
+]
+ 
 export const metrics = [
-  { value: "40+", label: "Product launches delivered" },
-  { value: "15", label: "Years of collective experience" },
-  { value: "12", label: "Industry awards won" },
+  { value: "40", label: "Total Projects Completed" },
+  { value: "15", label: "Years of Experience" },
+  { value: "12", label: "Design Awards" },
 ];
 
 export const services = [

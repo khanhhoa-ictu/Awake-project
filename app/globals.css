@@ -4,7 +4,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-sans-stack: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-sans-stack: var(--font-inter), "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   --font-serif-stack: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 

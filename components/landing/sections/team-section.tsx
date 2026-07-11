@@ -18,7 +18,7 @@ export function TeamSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-400">
             Team
           </p>
-          <h2 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.05em] text-zinc-950 dark:text-white sm:text-5xl lg:text-[4.2rem] lg:leading-[0.94]">
+          <h2 className="mt-5 text-balance text-4xl font-semibold tracking-tighter text-zinc-950 dark:text-white sm:text-5xl lg:text-[4.2rem] lg:leading-[0.94]">
             Meet the creative minds
             <br />
             behind{" "}

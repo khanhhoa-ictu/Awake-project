@@ -8,7 +8,7 @@ export function TestimonialsSection() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-400">
             Social proof
           </p>
-          <h2 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.05em] text-zinc-950 dark:text-white sm:text-5xl lg:text-[4.2rem] lg:leading-[0.95]">
+          <h2 className="mt-5 text-balance text-4xl font-semibold tracking-tighter text-zinc-950 dark:text-white sm:text-5xl lg:text-[4.2rem] lg:leading-[0.95]">
             What satisfied customers
             <br />
             are{" "}
@@ -19,7 +19,7 @@ export function TestimonialsSection() {
         </div>
 
         <div className="mt-16 grid gap-6 lg:grid-cols-12">
-          <article className="relative min-h-[560px] overflow-hidden rounded-[2.25rem] bg-zinc-950 lg:col-span-8">
+          <article className="relative min-h-140 overflow-hidden rounded-[2.25rem] bg-zinc-950 lg:col-span-8">
             <Image
               src="/images/background.png"
               alt="Happy client working on a laptop"
@@ -73,10 +73,10 @@ export function TestimonialsSection() {
 
           <article className="rounded-[2.25rem] bg-zinc-950 p-6 text-white shadow-[0_20px_70px_rgba(15,23,42,0.06)] dark:border dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02))] dark:shadow-[0_20px_55px_rgba(0,0,0,0.22)] lg:col-span-4">
             <p className="text-xs uppercase tracking-[0.22em] text-white/55">Customer stories</p>
-            <p className="mt-8 max-w-xs text-[2.05rem] leading-[1.06] tracking-[-0.05em] text-white">
+            <p className="mt-8 max-w-xs text-[2.05rem] leading-[1.06] tracking-tighter text-white">
               Their creativity and attention to detail transformed our brand completely!
             </p>
-            <div className="relative mt-8 aspect-[278/178] overflow-hidden rounded-[1.4rem]">
+            <div className="relative mt-8 aspect-278/178 overflow-hidden rounded-[1.4rem]">
               <Image
                 src="/images/desk.png"
                 alt="Creative workspace"

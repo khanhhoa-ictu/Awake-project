@@ -154,7 +154,6 @@ export function ProjectsSection() {
     <section id="work" className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Selected Work"
           title="How we transformed small businesses online"
           description="A few examples of how strategy, storytelling and interface craft can move a brand from unclear to memorable."
         />
@@ -162,7 +161,7 @@ export function ProjectsSection() {
           {projects.map((project) => (
             <article key={project.name} className="group">
               <div
-                className={`aspect-[1.52/1] rounded-[2rem] border border-zinc-200 bg-gradient-to-br ${project.tint} shadow-[0_24px_80px_rgba(15,23,42,0.06)] transition duration-300 group-hover:-translate-y-1 dark:border-white/8 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-900 dark:shadow-[0_22px_60px_rgba(0,0,0,0.24)]`}
+                className={`aspect-[1.52/1] rounded-4xl border border-zinc-200 bg-linear-to-br ${project.tint} shadow-[0_24px_80px_rgba(15,23,42,0.06)] transition duration-300 group-hover:-translate-y-1 dark:border-white/8 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-900 dark:shadow-[0_22px_60px_rgba(0,0,0,0.24)]`}
               >
                 {renderProjectPreview(project.name)}
               </div>

@@ -1,3 +1,4 @@
+import { ArrowRightUpIcon, ArrowRightUpWhiteIcon } from "@/public/icon";
 import { services } from "../data";
 import { SectionHeading } from "../section-heading";
 
@@ -5,15 +6,20 @@ export function ServicesSection() {
   return (
     <section id="services" className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading title="Where innovation meets aesthetics" description="" />
+        <SectionHeading
+          title="Where innovation meets aesthetics"
+          description=""
+        />
         <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
           {services.map((service) => (
             <article
               key={service.title}
               className={`min-h-48 rounded-[1.75rem] border border-white/70 bg-linear-to-br ${service.accent} p-8 transition hover:-translate-y-1 dark:border-white/8 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-900 dark:shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]`}
             >
-              <div className="text-zinc-950 dark:text-white">{service.icon}</div>
-              <h3 className="mt-10 max-w-[11rem] text-2xl leading-tight font-semibold text-zinc-950 dark:text-white">
+              <div className="text-zinc-950 dark:text-white">
+                {service.icon}
+              </div>
+              <h3 className="mt-10 max-w-44 text-2xl leading-tight font-semibold text-zinc-950 dark:text-white">
                 {service.title}
               </h3>
             </article>
@@ -24,18 +30,18 @@ export function ServicesSection() {
             See Our Work in Action. Start Your Creative Journey with Us!
           </p>
           <div className="flex flex-wrap gap-3 lg:justify-end">
-            <a
-              href="#pricing"
-              className="rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-950! transition hover:bg-zinc-100"
-            >
-              View pricing
-            </a>
-            <a
-              href="#contact"
-              className="rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/8"
-            >
-              Book a call
-            </a>
+            <div className="flex justify-between items-center rounded-full gap-4 bg-white px-5 py-3 text-sm font-semibold text-zinc-950! transition hover:bg-zinc-100">
+              <a href="#pricing">Let’s Collaborate</a>
+              <span className="w-8 h-8 bg-black rounded-full flex justify-center items-center">
+                <ArrowRightUpWhiteIcon />
+              </span>
+            </div>
+            <div className="flex justify-between items-center gap-4 rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/8">
+              <a href="#contact">View Portfolio</a>
+              <span className="w-8 h-8 bg-white rounded-full flex justify-center items-center">
+                <ArrowRightUpIcon />
+              </span>
+            </div>
           </div>
         </div>
       </div>
