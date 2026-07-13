@@ -1,22 +1,21 @@
-import { BandIcon, BarIcon, ImageIcon, LayoutIcon, MagicIcon } from "@/public/icon";
+import {
+  BandIcon,
+  BarIcon,
+  ImageIcon,
+  LayoutIcon,
+  MagicIcon,
+} from "@/public/icon";
 
-export const navItems = [
-  "Services",
-  "Work",
-  "Team",
-  "Pricing",
-  "FAQ",
-];
+export const navItems = ["Services", "Work", "Team", "Pricing", "FAQ"];
 
 export const listLogo = [
-    "/images/logo1.png",
-    "/images/logo2.png",
-    "/images/logo3.png",
-    "/images/logo4.png",
-    "/images/logo5.png",
+  "/images/logo1.png",
+  "/images/logo2.png",
+  "/images/logo3.png",
+  "/images/logo4.png",
+  "/images/logo5.png",
+];
 
-]
- 
 export const metrics = [
   { value: "40", label: "Total Projects Completed" },
   { value: "15", label: "Years of Experience" },
@@ -25,40 +24,52 @@ export const metrics = [
 
 export const services = [
   {
-    title: "Brand Strategy",
+    title: "Brand",
+    subTitle: "Strategy",
     description:
       "Positioning, naming and messaging systems that make young brands feel unmistakable.",
     accent: "from-violet-100 to-fuchsia-100",
-    icon: <BandIcon/>
+    icon: <BandIcon />,
+    color: "#BA81EE",
   },
   {
-    title: "Digital Marketing",
+    title: "Digital",
+    subTitle: "Marketing",
+
     description:
       "Campaign architecture and launch content tuned for awareness, conversion and retention.",
     accent: "from-sky-100 to-cyan-100",
-    icon: <ImageIcon/>
-
+    icon: <ImageIcon />,
+    color: "#70B5FF",
   },
   {
-    title: "UI/UX Design",
+    title: "UI/UX",
+    subTitle: "Design",
+
     description:
       "Confident product interfaces that balance storytelling, usability and business clarity.",
     accent: "from-amber-100 to-orange-100",
-    icon: <MagicIcon/>
+    icon: <MagicIcon />,
+    color: "#FFAF68",
   },
   {
-    title: "Analytics & Reporting",
+    title: "Analytics &",
+    subTitle: "Reporting",
+
     description:
       "Weekly signal tracking that turns design performance into practical product decisions.",
     accent: "from-emerald-100 to-lime-100",
-    icon: <BarIcon/>
+    icon: <BarIcon />,
+    color: "#79D45E",
   },
   {
-    title: "Web Development",
+    title: "Web",
+    subTitle: "Development",
     description:
       "Fast marketing sites and launch-ready frontends built to scale with your next milestone.",
     accent: "from-rose-100 to-pink-100",
-    icon: <LayoutIcon/>
+    icon: <LayoutIcon />,
+    color: "#F4889A",
   },
 ];
 
@@ -66,34 +77,54 @@ export const projects = [
   {
     name: "FlowBank",
     category: "Fintech launch",
-    summary: "A warmer, higher-converting brand and onboarding flow for a growing finance app.",
+    summary:
+      "A warmer, higher-converting brand and onboarding flow for a growing finance app.",
     tint: "from-lime-100 via-white to-emerald-50",
   },
   {
     name: "Academy.co",
     category: "Learning platform",
-    summary: "A modular course marketplace designed to feel premium without slowing the funnel.",
+    summary:
+      "A modular course marketplace designed to feel premium without slowing the funnel.",
     tint: "from-violet-100 via-white to-indigo-50",
   },
   {
     name: "Genome",
     category: "Health research",
-    summary: "A science-forward digital identity that helped a deep-tech startup explain complex work.",
+    summary:
+      "A science-forward digital identity that helped a deep-tech startup explain complex work.",
     tint: "from-zinc-200 via-white to-slate-100",
   },
   {
     name: "Hotto",
     category: "Consumer brand",
-    summary: "A playful commerce refresh built to increase trust, recall and repeat purchase intent.",
+    summary:
+      "A playful commerce refresh built to increase trust, recall and repeat purchase intent.",
     tint: "from-sky-100 via-white to-blue-50",
   },
 ];
 
 export const team = [
-  { name: "Logan Dang", role: "WordPress Developer", accent: "from-violet-500 to-indigo-500" },
-  { name: "Ana Belić", role: "Social Media Specialist", accent: "from-amber-400 to-orange-400" },
-  { name: "Brian Hanley", role: "Product Designer", accent: "from-cyan-500 to-sky-400" },
-  { name: "Darko Stanković", role: "UI Designer", accent: "from-emerald-400 to-teal-400" },
+  {
+    name: "Logan Dang",
+    role: "WordPress Developer",
+    accent: "from-violet-500 to-indigo-500",
+  },
+  {
+    name: "Ana Belić",
+    role: "Social Media Specialist",
+    accent: "from-amber-400 to-orange-400",
+  },
+  {
+    name: "Brian Hanley",
+    role: "Product Designer",
+    accent: "from-cyan-500 to-sky-400",
+  },
+  {
+    name: "Darko Stanković",
+    role: "UI Designer",
+    accent: "from-emerald-400 to-teal-400",
+  },
 ];
 
 export const pricingPlans = [
@@ -101,7 +132,8 @@ export const pricingPlans = [
     name: "Starter",
     price: "$2500",
     tone: "bg-amber-200",
-    description: "For teams that need sharp design support, one focused request at a time.",
+    description:
+      "For teams that need sharp design support, one focused request at a time.",
     features: [
       "Design updates every 2 days",
       "Mid-level designer",
@@ -154,16 +186,19 @@ export const awards = [
   {
     title: "Framer Awards",
     year: "2024",
-    description: "Recognized for polished interaction design and launch experiences that feel alive.",
+    description:
+      "Recognized for polished interaction design and launch experiences that feel alive.",
   },
   {
     title: "Dribbble Awards",
     year: "2023",
-    description: "Celebrated for distinctive visual systems and strong storytelling across touchpoints.",
+    description:
+      "Celebrated for distinctive visual systems and strong storytelling across touchpoints.",
   },
   {
     title: "Awwwards Mention",
     year: "2022",
-    description: "Highlighted for creative direction, clarity of motion and conversion-minded craft.",
+    description:
+      "Highlighted for creative direction, clarity of motion and conversion-minded craft.",
   },
 ];

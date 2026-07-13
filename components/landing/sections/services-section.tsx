@@ -6,10 +6,11 @@ export function ServicesSection() {
   return (
     <section id="services" className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          title="Where innovation meets aesthetics"
-          description=""
-        />
+        <div>
+          <h2 className="mx-auto max-w-96 text-[48px] tracking-tight leading-14 font-medium text-center">
+            Where innovation meets <span className="font-instrument-serif font-normal">aesthetics</span>{" "}
+          </h2>
+        </div>
         <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-5">
           {services.map((service) => (
             <article
@@ -19,8 +20,17 @@ export function ServicesSection() {
               <div className="text-zinc-950 dark:text-white">
                 {service.icon}
               </div>
-              <h3 className="mt-10 max-w-44 text-2xl leading-tight font-semibold text-zinc-950 dark:text-white">
+              <h3
+                className="mt-10 max-w-44 text-xl leading-tight dark:text-white"
+                style={{ color: service.color }}
+              >
                 {service.title}
+              </h3>
+              <h3
+                className="max-w-44 text-xl leading-tight dark:text-white"
+                style={{ color: service.color }}
+              >
+                {service.subTitle}
               </h3>
             </article>
           ))}
@@ -36,7 +46,7 @@ export function ServicesSection() {
                 <ArrowRightUpWhiteIcon />
               </span>
             </div>
-            <div className="flex justify-between items-center gap-4 rounded-full border border-white/25 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/8">
+            <div className="flex justify-between items-center gap-4 rounded-full border-white border-2 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/8">
               <a href="#contact">View Portfolio</a>
               <span className="w-8 h-8 bg-white rounded-full flex justify-center items-center">
                 <ArrowRightUpIcon />

@@ -37,15 +37,15 @@ function HeroSection() {
       </div>
       <div className="mx-auto max-w-310">
         <div className="relative mx-auto max-w-5xl text-center">
-          <h1 className="mt-6 font-serif text-5xl leading-[0.95] text-zinc-950 dark:text-white sm:text-7xl lg:text-[6.5rem]">
+          <h1 className="mt-6 font-semibold text-4xl leading-[1.3] text-[#1B1D1E] dark:text-white sm:text-6xl lg:text-[6rem]">
             Building bold brands
             <br />
             with{" "}
-            <span className="italic text-zinc-700 dark:text-zinc-300">
+            <span className="italic text-[#1B1D1E] font-normal font-instrument-serif">
               thoughtful design
             </span>
           </h1>
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 sm:text-xl">
+          <p className="mx-auto mt-8 max-w-3xl text-sm text-[#1B1D1E]/60 dark:text-zinc-400 sm:text-base">
             At Awake, we help small startups tackle the world’s biggest
             challenges with tailored solutions, guiding you from strategy to
             success in a competitive market.
@@ -93,7 +93,7 @@ function HeroSection() {
                     );
                   })}
                 </div>
-                <p className="text-sm font-semibold text-zinc-950 dark:text-white">
+                <p className="text-sm text-[#1B1D1E]/60 dark:text-white">
                   Trusted by 1000+ clients
                 </p>
               </div>
@@ -117,7 +117,7 @@ function LogoStrip() {
       <div className="relative mx-auto max-w-7xl py-10">
         <div className="mx-auto flex max-w-xl items-center justify-center gap-4">
           <span className="h-px flex-1 bg-zinc-200 dark:bg-linear-to-r dark:from-transparent dark:via-sky-300/35 dark:to-transparent" />
-          <p className="text-center text-sm text-zinc-500 dark:rounded-full dark:border dark:border-white/10 dark:bg-white/[0.04] dark:px-5 dark:py-2 dark:text-zinc-200 dark:shadow-[0_10px_30px_rgba(0,0,0,0.22)]">
+          <p className="text-center text-base text-[#1B1D1E]/60 dark:rounded-full dark:border dark:border-white/10 dark:bg-white/4 dark:px-5 dark:py-2 dark:text-zinc-200 dark:shadow-[0_10px_30px_rgba(0,0,0,0.22)]">
             Loved by 1000+ big and small brands around the worlds
           </p>
           <span className="h-px flex-1 bg-zinc-200 dark:bg-linear-to-r dark:from-transparent dark:via-sky-300/35 dark:to-transparent" />
@@ -155,32 +155,32 @@ function MetricsSection() {
       <div className="relative mx-auto max-w-310">
         <div className="mx-auto max-w-6xl text-center">
           <div className="flex flex-wrap items-center justify-center gap-3 text-center">
-            <span className="text-4xl font-medium text-zinc-950 dark:text-white sm:text-5xl">
+            <span className="text-2xl font-medium text-[#1B1D1E] dark:text-white sm:text-[48px]">
               We fuse
             </span>
-            <span className="inline-flex items-center gap-3 rounded-full bg-violet-100 px-5 py-2 text-3xl font-medium text-violet-500 dark:bg-violet-400/12 dark:text-violet-300 sm:text-4xl">
+            <span className="inline-flex items-center gap-3 rounded-full bg-violet-100 px-5 py-2 text-3xl font-medium text-violet-500 dark:bg-violet-400/12 dark:text-violet-300 sm:text-[48px] font-instrument-serif">
               <span>
                 <CreativityIcon />
               </span>
               Creativity
             </span>
-            <span className="inline-flex items-center gap-3 rounded-full bg-sky-100 px-5 py-2 text-3xl font-medium text-sky-500 dark:bg-sky-400/12 dark:text-sky-300 sm:text-4xl">
+            <span className="inline-flex items-center gap-3 rounded-full bg-sky-100 px-5 py-2 text-3xl font-medium text-sky-500 dark:bg-sky-400/12 dark:text-sky-300 sm:text-[48px] font-instrument-serif">
               <span>
                 <InnovationIcon />
               </span>
               Innovation
             </span>
-            <span className="text-4xl font-medium text-zinc-950 dark:text-white sm:text-5xl">
+            <span className="text-4xl font-medium text-[#1B1D1E] dark:text-white sm:text-5xl">
               &amp;
             </span>
-            <span className="inline-flex items-center gap-3 rounded-full bg-amber-100 px-5 py-2 text-3xl font-medium text-amber-500 dark:bg-amber-300/12 dark:text-amber-300 sm:text-4xl">
+            <span className="inline-flex items-center gap-3 rounded-full bg-amber-100 px-5 py-2 text-3xl font-medium text-amber-500 dark:bg-amber-300/12 dark:text-amber-300 sm:text-[48px] font-instrument-serif">
               <span>
                 <StrategyIcon />
               </span>
               Strategy
             </span>
           </div>
-          <p className="mx-auto mt-8 max-w-5xl text-2xl leading-tight text-zinc-700 dark:text-zinc-300 sm:text-4xl sm:leading-tight">
+          <p className="mx-auto tracking-tight font-medium mt-8 text-2xl leading-tight text-[#1B1D1E] dark:text-zinc-300 sm:text-[48px] sm:leading-tight">
             to craft exceptional, digital experiences strategy, and technology
             to drive exceptional, impactful results.
           </p>
@@ -192,15 +192,15 @@ function MetricsSection() {
               className={`px-8 py-12 text-center ${index < metrics.length - 1 ? "border-b border-zinc-200/80 md:border-b-0 md:border-r" : ""} border-zinc-200/80 dark:border-white/8`}
             >
               <div className="w-full flex justify-center">
-                <p className="relative font-serif text-7xl tracking-tight text-zinc-950 dark:text-white w-fit text-center">
-                  <span className="absolute -top-2 -left-10.5">
+                <p className="relative text-[128px] text-zinc-950 dark:text-white w-fit text-center font-medium">
+                  <span className="absolute top-8 -left-10.5">
                     <PlusIcon />{" "}
                   </span>
                   {metric.value}
                 </p>
               </div>
 
-              <p className="mt-4 text-sm uppercase tracking-[0.2em] text-zinc-500 dark:text-zinc-400">
+              <p className="mt-4 text-base text-[#1B1D1E]/60 dark:text-zinc-400">
                 {metric.label}
               </p>
             </article>

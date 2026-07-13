@@ -16,7 +16,11 @@ function renderProjectPreview(projectName: string) {
                 {label}
               </p>
               <p className="mt-1 text-[0.7rem] font-semibold text-zinc-700 dark:text-zinc-200">
-                {label === "Euro" ? "1,952" : label === "Pound" ? "2,174" : "3,156"}
+                {label === "Euro"
+                  ? "1,952"
+                  : label === "Pound"
+                    ? "2,174"
+                    : "3,156"}
               </p>
             </div>
           ))}
@@ -58,44 +62,51 @@ function renderProjectPreview(projectName: string) {
           </div>
           <div className="mt-6 grid grid-cols-[8rem_1fr] gap-6">
             <div className="space-y-3">
-              {["Dashboard", "Courses", "Chats", "Grades", "Settings"].map((item, index) => (
-                <div
-                  key={item}
-                  className={`rounded-xl px-3 py-2 text-xs ${
-                    index === 0
-                      ? "bg-violet-100 text-zinc-900 dark:bg-violet-400/25 dark:text-white"
-                      : "bg-transparent text-zinc-400 dark:text-zinc-500"
-                  }`}
-                >
-                  {item}
-                </div>
-              ))}
+              {["Dashboard", "Courses", "Chats", "Grades", "Settings"].map(
+                (item, index) => (
+                  <div
+                    key={item}
+                    className={`rounded-xl px-3 py-2 text-xs ${
+                      index === 0
+                        ? "bg-violet-100 text-zinc-900 dark:bg-violet-400/25 dark:text-white"
+                        : "bg-transparent text-zinc-400 dark:text-zinc-500"
+                    }`}
+                  >
+                    {item}
+                  </div>
+                ),
+              )}
             </div>
             <div>
               <div className="grid grid-cols-3 gap-4">
-                {["from-orange-300 to-amber-200", "from-violet-300 to-fuchsia-200", "from-sky-300 to-blue-200"].map(
-                  (tone) => (
-                    <div
-                      key={tone}
-                      className={`rounded-3xl bg-gradient-to-br ${tone} p-3 shadow-[0_10px_24px_rgba(15,23,42,0.05)] dark:shadow-none`}
-                    >
-                      <div className="h-18 rounded-2xl bg-white/35" />
-                      <div className="mt-4 h-3 w-18 rounded-full bg-white/70" />
-                      <div className="mt-2 flex gap-1">
-                        {[...Array(3)].map((_, avatarIndex) => (
-                          <span
-                            key={avatarIndex}
-                            className="h-4 w-4 rounded-full border border-white/70 bg-white/80"
-                          />
-                        ))}
-                      </div>
+                {[
+                  "from-orange-300 to-amber-200",
+                  "from-violet-300 to-fuchsia-200",
+                  "from-sky-300 to-blue-200",
+                ].map((tone) => (
+                  <div
+                    key={tone}
+                    className={`rounded-3xl bg-gradient-to-br ${tone} p-3 shadow-[0_10px_24px_rgba(15,23,42,0.05)] dark:shadow-none`}
+                  >
+                    <div className="h-18 rounded-2xl bg-white/35" />
+                    <div className="mt-4 h-3 w-18 rounded-full bg-white/70" />
+                    <div className="mt-2 flex gap-1">
+                      {[...Array(3)].map((_, avatarIndex) => (
+                        <span
+                          key={avatarIndex}
+                          className="h-4 w-4 rounded-full border border-white/70 bg-white/80"
+                        />
+                      ))}
                     </div>
-                  ),
-                )}
+                  </div>
+                ))}
               </div>
               <div className="mt-6 grid grid-cols-4 gap-3">
                 {[...Array(8)].map((_, index) => (
-                  <span key={index} className="h-3 rounded-full bg-zinc-100 dark:bg-white/10" />
+                  <span
+                    key={index}
+                    className="h-3 rounded-full bg-zinc-100 dark:bg-white/10"
+                  />
                 ))}
               </div>
             </div>
@@ -153,10 +164,11 @@ export function ProjectsSection() {
   return (
     <section id="work" className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          title="How we transformed small businesses online"
-          description="A few examples of how strategy, storytelling and interface craft can move a brand from unclear to memorable."
-        />
+        <h2 className="mx-auto max-w-150 text-[48px] tracking-tight leading-14 font-medium text-center">
+          How we{" "}
+          <span className="font-instrument-serif font-normal italic">transformed</span>{" "}
+          a small business’s online presence
+        </h2>
         <div className="mt-14 grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
             <article key={project.name} className="group">
