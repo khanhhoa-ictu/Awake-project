@@ -18,8 +18,8 @@ const sitemapLinks = [
 
 const otherPages = [
   { label: "Error 404", href: "/error-404" },
-  { label: "Terms & Conditions", href: "#" },
-  { label: "Privacy Policy", href: "#" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
   { label: "Documentation", href: "#" },
 ];
 
