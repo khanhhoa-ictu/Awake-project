@@ -1,4 +1,4 @@
-import { MarketingHeader } from "./contact-page";
+import { MarketingHeader } from "./site-header";
 import { SiteFooter } from "./sections/site-footer";
 
 const privacySections = [
@@ -83,16 +83,16 @@ function PrivacyCard() {
 
 export function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fbfdff_0%,#ffffff_22%,#fffdfa_100%)] dark:bg-[linear-gradient(180deg,#090b0f_0%,#0c1117_28%,#090b0f_100%)]">
+    <div className="min-h-screen dark:bg-[linear-gradient(180deg,#090b0f_0%,#0c1117_28%,#090b0f_100%)]">
+      <MarketingHeader />
+
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-1/2 top-16 h-[34rem] w-[120rem] -translate-x-1/2 bg-[linear-gradient(90deg,rgba(217,243,252,0.9)_0%,rgba(255,255,255,0.96)_50%,rgba(253,241,211,0.9)_100%)] blur-[160px] dark:bg-[linear-gradient(90deg,rgba(56,189,248,0.18)_0%,rgba(15,23,42,0.22)_50%,rgba(245,158,11,0.18)_100%)]" />
+          <div className="absolute left-1/2 top-16 h-145 w-[120rem] -translate-x-1/2 bg-[linear-gradient(90deg,rgba(217,243,252,0.9)_0%,rgba(255,255,255,0.96)_50%,rgba(253,241,211,0.9)_100%)] blur-[160px] dark:bg-[linear-gradient(90deg,rgba(56,189,248,0.18)_0%,rgba(15,23,42,0.22)_50%,rgba(245,158,11,0.18)_100%)]" />
         </div>
 
         <div className="relative">
-          <MarketingHeader />
-
-          <main className="px-6 pb-20 pt-14 lg:px-8 lg:pt-20">
+          <main className="px-6 pb-20 pt-34 lg:px-8 lg:pt-40">
             <div className="mx-auto max-w-6xl">
               <h1 className="text-center text-4xl font-medium tracking-tight text-[#1B1D1E] sm:text-[48px] sm:leading-[1.2] dark:text-white">
                 Privacy <span className="font-instrument-serif italic font-normal">Policy</span> 

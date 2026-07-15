@@ -2,29 +2,10 @@ import Link from "next/link";
 
 import { ArrowRightUpIcon, ArrowRightUpWhiteIcon } from "@/public/icon";
 
-import { MarketingHeader } from "./contact-page";
+import { MarketingHeader } from "./site-header";
 import { SiteFooter } from "./sections/site-footer";
 
 function ErrorArtwork() {
-  const squarePositions = [
-    "left-[6%] top-[13%]",
-    "left-[16%] top-[13%]",
-    "left-[44%] top-[12%]",
-    "left-[56%] top-[13%]",
-    "left-[72%] top-[12%]",
-    "left-[83%] top-[13%]",
-    "left-[6%] top-[67%]",
-    "left-[16%] top-[67%]",
-    "left-[72%] top-[67%]",
-    "left-[83%] top-[67%]",
-    "left-[30%] top-[22%]",
-    "left-[30%] top-[50%]",
-    "left-[50%] top-[9%]",
-    "left-[50%] top-[78%]",
-    "left-[64%] top-[22%]",
-    "left-[64%] top-[50%]",
-  ];
-
   return (
     <div className="relative mx-auto h-72 w-full max-w-160 sm:h-88">
       <div className="absolute inset-x-[10%] top-[8%] h-[78%] rounded-sm border border-[#1B1D1E]/25 bg-[linear-gradient(180deg,rgba(222,239,249,0.4),rgba(255,255,255,0.12))] dark:border-white/18 dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))]" />
@@ -43,15 +24,15 @@ function ErrorArtwork() {
 export function NotFoundPage() {
   return (
     <div className="min-h-screen bg-[linear-gradient(180deg,#fbfdff_0%,#ffffff_24%,#fffdfa_100%)] dark:bg-[linear-gradient(180deg,#090b0f_0%,#0c1117_28%,#090b0f_100%)]">
+      <MarketingHeader />
+
       <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-1/2 top-16 h-[34rem] w-[120rem] -translate-x-1/2 bg-[linear-gradient(90deg,rgba(217,243,252,0.92)_0%,rgba(255,255,255,0.96)_50%,rgba(253,241,211,0.92)_100%)] blur-[160px] dark:bg-[linear-gradient(90deg,rgba(56,189,248,0.18)_0%,rgba(15,23,42,0.22)_50%,rgba(245,158,11,0.18)_100%)]" />
+       <div className="pointer-events-none absolute inset-0">
+          <div className="absolute left-1/2 top-16 h-145 w-[120rem] -translate-x-1/2 bg-[linear-gradient(90deg,rgba(217,243,252,0.9)_0%,rgba(255,255,255,0.96)_50%,rgba(253,241,211,0.9)_100%)] blur-[160px] dark:bg-[linear-gradient(90deg,rgba(56,189,248,0.18)_0%,rgba(15,23,42,0.22)_50%,rgba(245,158,11,0.18)_100%)]" />
         </div>
 
         <div className="relative">
-          <MarketingHeader />
-
-          <main className="px-6 pb-20 pt-12 lg:px-8 lg:pt-16">
+          <main className="px-6 pb-20 pt-32 lg:px-8 lg:pt-36">
             <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
               <ErrorArtwork />
 

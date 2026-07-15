@@ -1,23 +1,11 @@
-import Link from "next/link";
-
 import {
   ArrowDownIcon,
   ArrowRightUpIcon,
   ArrowRightUpWhiteIcon,
   ExplainIcon,
-  LogoIcon,
 } from "@/public/icon";
 import { SiteFooter } from "@/components/landing/sections/site-footer";
-import { ThemeToggle } from "@/components/landing/theme-toggle";
-
-const marketingNavItems = [
-  { label: "About us", href: "/#team" },
-  { label: "Services", href: "/#services" },
-  { label: "Work", href: "/#work" },
-  { label: "Team", href: "/#team" },
-  { label: "Pricing", href: "/#pricing" },
-  { label: "Awards", href: "/#awards" },
-];
+import { MarketingHeader } from "@/components/landing/site-header";
 
 const contactFaqs = [
   {
@@ -51,56 +39,6 @@ const contactFaqs = [
       "Send us your goals, timeline and any current materials. We will review the brief, suggest the right engagement model and map out the next steps with you.",
   },
 ];
-
-export function MarketingHeader() {
-  return (
-    <header className="sticky top-0 z-30 border-b border-black/6 bg-white/70 backdrop-blur-xl dark:border-white/8 dark:bg-[#0c0f12]/84">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-8">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-3 text-sm font-semibold text-[#1B1D1E] dark:text-white"
-        >
-          <span className="text-[#1B1D1E] dark:text-white">
-            <LogoIcon />
-          </span>
-          Awake
-        </Link>
-
-        <nav className="hidden items-center gap-1 rounded-full bg-black/5 p-1 lg:flex dark:bg-white/6">
-          {marketingNavItems.map((item, index) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className={`rounded-full px-4 py-2.5 text-sm transition ${
-                index === 0
-                  ? "border border-black/8 bg-white text-[#1B1D1E] shadow-[0_1px_2px_rgba(0,0,0,0.06)] dark:border-white/10 dark:bg-white dark:text-[#1B1D1E]"
-                  : "text-[#1B1D1E]/60 hover:text-[#1B1D1E] dark:text-white/55 dark:hover:text-white"
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-3">
-          <a
-            href="#"
-            className="hidden rounded-full border border-[#1B1D1E]/15 px-4 py-2 text-sm text-[#1B1D1E] transition hover:border-[#1B1D1E]/25 lg:inline-flex dark:border-white/12 dark:text-white dark:hover:border-white/25"
-          >
-            Sign In
-          </a>
-          <a
-            href="#"
-            className="hidden rounded-full bg-[#1B1D1E] px-4 py-2 text-sm text-white transition hover:bg-black lg:inline-flex dark:bg-white dark:text-[#1B1D1E] dark:hover:bg-zinc-100"
-          >
-            Sign Up
-          </a>
-          <ThemeToggle />
-        </div>
-      </div>
-    </header>
-  );
-}
 
 function ContactField({
   label,
@@ -168,7 +106,7 @@ function ContactSelect({
 
 function ContactFormSection() {
   return (
-    <section className="px-6 pb-20 pt-14 lg:px-8 lg:pt-20">
+    <section className="px-6 pb-20 pt-34 lg:px-8 lg:pt-40">
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <h1 className="text-4xl font-medium tracking-tight text-[#1B1D1E] sm:text-[48px] sm:leading-[1.2] dark:text-white">
@@ -290,14 +228,14 @@ function ContactFaqSection() {
 
 export function ContactPage() {
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#fbfdff_0%,#ffffff_22%,#fffdfa_100%)] dark:bg-[linear-gradient(180deg,#090b0f_0%,#0c1117_28%,#090b0f_100%)]">
+    <div className="min-h-screen dark:bg-[linear-gradient(180deg,#090b0f_0%,#0c1117_28%,#090b0f_100%)]">
+      <MarketingHeader />
+
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-1/2 top-16 h-136 w-[120rem] -translate-x-1/2 bg-[linear-gradient(90deg,rgba(217,243,252,0.9)_0%,rgba(255,255,255,0.96)_50%,rgba(253,241,211,0.9)_100%)] blur-[160px] dark:bg-[linear-gradient(90deg,rgba(56,189,248,0.18)_0%,rgba(15,23,42,0.22)_50%,rgba(245,158,11,0.18)_100%)]" />
+          <div className="absolute left-1/2 top-16 h-145 w-[120rem] -translate-x-1/2 bg-[linear-gradient(90deg,rgba(217,243,252,0.9)_0%,rgba(255,255,255,0.96)_50%,rgba(253,241,211,0.9)_100%)] blur-[160px] dark:bg-[linear-gradient(90deg,rgba(56,189,248,0.18)_0%,rgba(15,23,42,0.22)_50%,rgba(245,158,11,0.18)_100%)]" />
         </div>
-
         <div className="relative">
-          <MarketingHeader />
           <ContactFormSection />
         </div>
       </div>

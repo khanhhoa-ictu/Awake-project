@@ -20,6 +20,19 @@ import { SiteFooter } from "./sections/site-footer";
 import { TeamSection } from "./sections/team-section";
 import { TestimonialsSection } from "./sections/testimonials-section";
 
+function DeferredSection({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      style={{
+        contentVisibility: "auto",
+        containIntrinsicSize: "900px",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 function HeroSection() {
   const heroAvatars = [
     "/images/Ellipse%2021.png",
@@ -29,12 +42,7 @@ function HeroSection() {
   ];
 
   return (
-    <section className="relative px-6 pb-20 pt-14 lg:px-8 lg:pt-20">
-      <div className="pointer-events-none absolute inset-0 hidden dark:block">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.04),transparent_42%)]" />
-        <div className="absolute inset-y-0 left-0 w-[38%] bg-[radial-gradient(circle_at_18%_30%,rgba(59,130,246,0.18),transparent_68%)]" />
-        <div className="absolute inset-y-0 right-0 w-[38%] bg-[radial-gradient(circle_at_82%_20%,rgba(245,158,11,0.18),transparent_70%)]" />
-      </div>
+    <section id="about" className="relative px-6 pb-20 pt-34 lg:px-8 lg:pt-40">
       <div className="mx-auto max-w-310">
         <div className="relative mx-auto max-w-5xl text-center">
           <h1 className="mt-6 font-semibold text-4xl leading-[1.3] text-[#1B1D1E] dark:text-white sm:text-6xl lg:text-[6rem]">
@@ -110,10 +118,6 @@ function LogoStrip() {
 
   return (
     <section className="relative px-6 py-10 lg:px-8">
-      <div className="pointer-events-none absolute inset-0 hidden dark:block">
-        <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(125,211,252,0.22),transparent)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.015),rgba(255,255,255,0))]" />
-      </div>
       <div className="relative mx-auto max-w-7xl py-10">
         <div className="mx-auto flex max-w-xl items-center justify-center gap-4">
           <span className="h-px flex-1 bg-zinc-200 dark:bg-linear-to-r dark:from-transparent dark:via-sky-300/35 dark:to-transparent" />
@@ -147,11 +151,6 @@ function LogoStrip() {
 function MetricsSection() {
   return (
     <section className="relative -mt-10 overflow-hidden px-6 py-24 lg:px-8 dark:bg-zinc-950">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(240,247,251,0.82)_0%,rgba(248,250,251,0.9)_22%,rgba(255,255,255,0.97)_52%,rgba(255,255,255,1)_100%)] dark:bg-[linear-gradient(180deg,rgba(10,14,24,0.96)_0%,rgba(12,18,29,0.98)_22%,rgba(10,14,24,1)_100%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(201,230,245,0.54),transparent_32%),radial-gradient(circle_at_82%_24%,rgba(248,229,172,0.34),transparent_30%)] opacity-55 dark:bg-[radial-gradient(circle_at_18%_22%,rgba(56,189,248,0.22),transparent_32%),radial-gradient(circle_at_82%_24%,rgba(245,158,11,0.16),transparent_30%)] dark:opacity-100" />
-      <div className="pointer-events-none absolute inset-x-0 -top-16 h-36 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(246,249,251,0.7)_58%,rgba(246,249,251,0.94)_100%)] dark:bg-[linear-gradient(180deg,rgba(10,14,24,0),rgba(10,14,24,0.72)_58%,rgba(10,14,24,0.94)_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-64 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0))] dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0))]" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-80 bg-[linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,0.82)_42%,rgba(255,255,255,1)_100%)] dark:bg-[linear-gradient(180deg,rgba(10,14,24,0),rgba(10,14,24,0.8)_42%,rgba(10,14,24,1)_100%)]" />
       <div className="relative mx-auto max-w-310">
         <div className="mx-auto max-w-6xl text-center">
           <div className="flex flex-wrap items-center justify-center gap-3 text-center">
@@ -193,8 +192,8 @@ function MetricsSection() {
             >
               <div className="w-full flex justify-center">
                 <p className="relative text-[128px] text-zinc-950 dark:text-white w-fit text-center font-medium">
-                  <span className="absolute top-8 -left-10.5 dark:text-white">
-                    <PlusIcon />{" "}
+                  <span className="absolute top-8 -left-10.5 text-[#1B1D1E] dark:text-white">
+                    <PlusIcon className="text-[#1B1D1E] dark:text-white" />{" "}
                   </span>
                   {metric.value}
                 </p>
@@ -214,25 +213,43 @@ function MetricsSection() {
 export function HomeSections() {
   return (
     <>
-      <div className="relative overflow-hidden bg-[linear-gradient(90deg,rgba(214,239,255,0.9)_0%,rgba(255,255,255,0.98)_24%,rgba(255,255,255,0.98)_76%,rgba(255,241,194,0.9)_100%)] dark:bg-[linear-gradient(90deg,rgba(8,15,28,1)_0%,rgba(10,14,24,0.98)_24%,rgba(10,14,24,0.98)_76%,rgba(28,20,6,1)_100%)]">
-        <div className="pointer-events-none absolute inset-0 hidden dark:block">
-          <div className="absolute inset-y-0 left-0 w-[34%] bg-[radial-gradient(circle_at_10%_30%,rgba(56,189,248,0.22),transparent_70%)]" />
-          <div className="absolute inset-y-0 right-0 w-[34%] bg-[radial-gradient(circle_at_90%_22%,rgba(245,158,11,0.2),transparent_70%)]" />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-[linear-gradient(180deg,rgba(10,14,24,0),rgba(10,14,24,0.88))]" />
+      <div className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute left-1/2 top-16 h-96 w-[70rem] -translate-x-1/2 bg-[linear-gradient(90deg,rgba(217,243,252,0.84)_0%,rgba(255,255,255,0.94)_50%,rgba(253,241,211,0.84)_100%)] blur-[72px] sm:h-120 sm:w-[96rem] sm:blur-[110px] lg:h-145 lg:w-[120rem] lg:blur-[160px] dark:bg-[linear-gradient(90deg,rgba(56,189,248,0.14)_0%,rgba(15,23,42,0.2)_50%,rgba(245,158,11,0.14)_100%)]" />
         </div>
         <HeroSection />
         <LogoStrip />
       </div>
-      <MetricsSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <TeamSection />
-      <TestimonialsSection />
-      <PricingSection />
-      <FaqSection />
-      <AwardsSection />
-      <CtaSection />
-      <SiteFooter />
+      <DeferredSection>
+        <MetricsSection />
+      </DeferredSection>
+      <DeferredSection>
+        <ServicesSection />
+      </DeferredSection>
+      <DeferredSection>
+        <ProjectsSection />
+      </DeferredSection>
+      <DeferredSection>
+        <TeamSection />
+      </DeferredSection>
+      <DeferredSection>
+        <TestimonialsSection />
+      </DeferredSection>
+      <DeferredSection>
+        <PricingSection />
+      </DeferredSection>
+      <DeferredSection>
+        <FaqSection />
+      </DeferredSection>
+      <DeferredSection>
+        <AwardsSection />
+      </DeferredSection>
+      <DeferredSection>
+        <CtaSection />
+      </DeferredSection>
+      <DeferredSection>
+        <SiteFooter />
+      </DeferredSection>
     </>
   );
 }

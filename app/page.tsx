@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import { faqs } from "@/components/landing/data";
 import { HomeSections } from "@/components/landing/home-sections";
-import { SiteHeader } from "@/components/landing/site-header";
+import { MarketingHeader } from "@/components/landing/site-header";
 
 export const metadata: Metadata = {
   title: "Creative Agency Landing Page",
@@ -50,8 +50,8 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
-      <div className="min-h-screen bg-[linear-gradient(180deg,#fffdf8_0%,#ffffff_18%,#fcfcfb_100%)] dark:bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.12),transparent_18%),radial-gradient(circle_at_top_right,rgba(99,102,241,0.16),transparent_24%),linear-gradient(180deg,#09090b_0%,#0d1117_32%,#09090b_100%)]">
-        <SiteHeader />
+      <div className="min-h-screen dark:bg-[radial-gradient(circle_at_top_left,rgba(56,189,248,0.12),transparent_18%),radial-gradient(circle_at_top_right,rgba(99,102,241,0.16),transparent_24%),linear-gradient(180deg,#09090b_0%,#0d1117_32%,#09090b_100%)]">
+        <MarketingHeader />
         <main>
           <HomeSections />
         </main>

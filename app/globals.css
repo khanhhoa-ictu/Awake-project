@@ -28,10 +28,18 @@
 
 html {
   background: #fffdf8;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 html.dark {
   background: #09090b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -52,6 +60,23 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+input.auth-input:-webkit-autofill,
+input.auth-input:-webkit-autofill:hover,
+input.auth-input:-webkit-autofill:focus,
+input.auth-input:-webkit-autofill:active {
+  -webkit-text-fill-color: #1b1d1e;
+  transition: background-color 9999s ease-in-out 0s;
+  box-shadow: 0 0 0 1000px #ffffff inset;
+}
+
+.dark input.auth-input:-webkit-autofill,
+.dark input.auth-input:-webkit-autofill:hover,
+.dark input.auth-input:-webkit-autofill:focus,
+.dark input.auth-input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff;
+  box-shadow: 0 0 0 1000px #1a1d21 inset;
 }
 
 ::selection {
