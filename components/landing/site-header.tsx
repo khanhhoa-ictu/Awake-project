@@ -18,23 +18,23 @@ export function SiteHeader() {
         </Link>
         <nav className="hidden items-center gap-8 text-sm text-zinc-600 dark:text-zinc-300 md:flex">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={`/#${item.toLowerCase()}`}
               className="transition hover:text-zinc-950 dark:hover:text-white"
             >
               {item}
-            </a>
+            </Link>
           ))}
         </nav>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="rounded-full bg-zinc-950 px-5 py-3 text-sm font-semibold text-white! transition hover:bg-zinc-800 dark:border dark:border-sky-400/20 dark:bg-white dark:text-zinc-950! dark:hover:bg-sky-50"
           >
             Book a call
-          </a>
+          </Link>
         </div>
       </div>
     </header>

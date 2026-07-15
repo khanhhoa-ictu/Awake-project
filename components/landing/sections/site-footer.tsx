@@ -1,18 +1,129 @@
+import Link from "next/link";
+
+import {
+  DribbleBlurIcon,
+  InstagramIcon,
+  LinkedinIcon,
+  LogoIcon,
+  XIcon,
+} from "@/public/icon";
+
+const sitemapLinks = [
+  { label: "Contact us", href: "/contact" },
+  { label: "About us", href: "/#team" },
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "Pricing", href: "/#pricing" },
+];
+
+const otherPages = [
+  { label: "Error 404", href: "/error-404" },
+  { label: "Terms & Conditions", href: "#" },
+  { label: "Privacy Policy", href: "#" },
+  { label: "Documentation", href: "#" },
+];
+
+const socialLinks = [
+  { label: "X", href: "#", icon: <XIcon /> },
+  { label: "LinkedIn", href: "#", icon: <LinkedinIcon /> },
+  { label: "Dribbble", href: "#", icon: <DribbleBlurIcon /> },
+  { label: "Instagram", href: "#", icon: <InstagramIcon /> },
+];
+
 export function SiteFooter() {
   return (
-    <footer className="border-t border-zinc-200/80 px-6 py-10 lg:px-8 dark:border-white/10">
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
-        <div>
-          <p className="text-lg font-semibold text-zinc-950 dark:text-white">Awake Studio</p>
-          <p className="mt-3 max-w-md text-sm leading-7 text-zinc-600 dark:text-zinc-400">
-            Design, strategy and frontend execution for startups that need launch energy and a more
-            memorable visual voice.
-          </p>
+    <footer className="px-6 pb-12 pt-20 lg:px-8">
+      <div className="mx-auto max-w-7xl  px-8 py-14  sm:px-12 dark:border-white/10 dark:bg-[#101214] ">
+        <div className="grid gap-12 lg:grid-cols-[1.45fr_0.8fr_0.8fr_1fr]">
+          <div>
+            <Link
+              href="/"
+              className="inline-flex items-center gap-3 text-2xl font-bold tracking-tight text-[#1B1D1E] dark:text-white"
+            >
+              <span className="text-[#1B1D1E] dark:text-white">
+                <LogoIcon />
+              </span>
+              Awake
+            </Link>
+            <p className="mt-6 max-w-xs text-sm leading-6 text-[#1B1D1E]/60 dark:text-white/55">
+              Empowering businesses with innovative solutions. Let&apos;s create
+              something amazing together.
+            </p>
+            <div className="mt-6 flex items-center gap-3 text-[#1B1D1E]/55 dark:text-white/55">
+              {socialLinks.map((socialLink) => (
+                <a
+                  key={socialLink.label}
+                  href={socialLink.href}
+                  aria-label={socialLink.label}
+                  className="transition hover:text-[#1B1D1E] dark:hover:text-white"
+                >
+                  {socialLink.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-base font-medium text-[#1B1D1E] dark:text-white">
+              Sitemap
+            </p>
+            <div className="mt-5 grid gap-3">
+              {sitemapLinks.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-base text-[#1B1D1E]/60! transition hover:text-[#1B1D1E] dark:text-white/60 dark:hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-base font-medium text-[#1B1D1E] dark:text-white">
+              Other Pages
+            </p>
+            <div className="mt-5 grid gap-3">
+              {otherPages.map((link) => (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-base text-[#1B1D1E]/60! transition hover:text-[#1B1D1E] dark:text-white/60 dark:hover:text-white"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <p className="text-base font-medium text-[#1B1D1E] dark:text-white">
+              Contact Details
+            </p>
+            <div className="mt-5 grid gap-3 text-base text-[#1B1D1E]/60 dark:text-white/60">
+              <p>81 Rivington Street London</p>
+              <p>EC2A 3AY</p>
+              <a
+                href="mailto:hello@awake.agency"
+                className="transition hover:text-[#1B1D1E] dark:hover:text-white"
+              >
+                hello@awake.agency
+              </a>
+              <a
+                href="tel:01051923556"
+                className="transition hover:text-[#1B1D1E] dark:hover:text-white"
+              >
+                0105 192 356
+              </a>
+            </div>
+          </div>
         </div>
-        <div className="grid gap-2 text-sm text-zinc-500 dark:text-zinc-400 sm:text-right">
-          <span>hello@awakestudio.dev</span>
-          <span>Ho Chi Minh City / Remote worldwide</span>
-          <span>© 2026 Awake Studio. Crafted in Next.js.</span>
+
+        <div className="mt-12 border-t border-zinc-200/80 pt-10 dark:border-white/10">
+          <p className="text-center text-xs text-[#1B1D1E]/35 dark:text-white/35">
+            &copy;2025 Awake. All Rights Reserved
+          </p>
         </div>
       </div>
     </footer>

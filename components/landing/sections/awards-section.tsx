@@ -9,7 +9,7 @@ export function AwardsSection() {
   ];
 
   return (
-    <section className="px-6 py-20 lg:px-8">
+    <section id="awards" className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <h2 className="mx-auto max-w-[52rem] text-center text-[48px] leading-14 font-medium tracking-tight text-[#1B1D1E] dark:text-white">
           Accolades and achievements celebrating our{" "}
