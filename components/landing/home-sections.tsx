@@ -41,7 +41,7 @@ function HeroSection() {
             Building bold brands
             <br />
             with{" "}
-            <span className="italic text-[#1B1D1E] font-normal font-instrument-serif">
+            <span className="font-instrument-serif font-normal italic text-[#1B1D1E] dark:text-white/75">
               thoughtful design
             </span>
           </h1>
@@ -134,7 +134,7 @@ function LogoStrip() {
                 alt={`Brand logo ${index + 1}`}
                 width={logoWidths[index] ?? 164}
                 height={40}
-                className="h-10 w-auto object-contain object-center transition duration-300 dark:opacity-80"
+                className="h-10 w-auto object-contain object-center transition duration-300 dark:brightness-0 dark:invert dark:opacity-70"
               />
             </div>
           ))}
@@ -185,7 +185,7 @@ function MetricsSection() {
             to drive exceptional, impactful results.
           </p>
         </div>
-        <div className="mt-16 grid gap-0 overflow-hidden rounded-4xl border border-zinc-200/80 bg-white/70 shadow-[0_20px_70px_rgba(15,23,42,0.05)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.015))] dark:shadow-[0_18px_50px_rgba(0,0,0,0.22)] md:grid-cols-3">
+        <div className="mt-16 grid gap-0 overflow-hidden rounded-4xl border border-zinc-200/80 bg-white/70 shadow-[0_20px_70px_rgba(15,23,42,0.05)] dark:border-white/8 dark:bg-[#1E2022] dark:shadow-[0_18px_50px_rgba(0,0,0,0.22)] md:grid-cols-3">
           {metrics.map((metric, index) => (
             <article
               key={metric.label}
@@ -193,7 +193,7 @@ function MetricsSection() {
             >
               <div className="w-full flex justify-center">
                 <p className="relative text-[128px] text-zinc-950 dark:text-white w-fit text-center font-medium">
-                  <span className="absolute top-8 -left-10.5">
+                  <span className="absolute top-8 -left-10.5 dark:text-white">
                     <PlusIcon />{" "}
                   </span>
                   {metric.value}

@@ -16,6 +16,13 @@ export const listLogo = [
   "/images/logo5.png",
 ];
 
+export const ProjectsSection = [
+  "/images/project_section_1.jpg",
+  "/images/project_section_2.jpg",
+  "/images/project_section_3.jpg",
+  "/images/project_section_4.jpg",
+];
+
 export const metrics = [
   { value: "40", label: "Total Projects Completed" },
   { value: "15", label: "Years of Experience" },
@@ -76,30 +83,22 @@ export const services = [
 export const projects = [
   {
     name: "FlowBank",
-    category: "Fintech launch",
-    summary:
-      "A warmer, higher-converting brand and onboarding flow for a growing finance app.",
+    category: ["UX Research", "Interface Design"],
     tint: "from-lime-100 via-white to-emerald-50",
   },
   {
     name: "Academy.co",
-    category: "Learning platform",
-    summary:
-      "A modular course marketplace designed to feel premium without slowing the funnel.",
+    category: ["Product Design", "Interaction Design"],
     tint: "from-violet-100 via-white to-indigo-50",
   },
   {
     name: "Genome",
-    category: "Health research",
-    summary:
-      "A science-forward digital identity that helped a deep-tech startup explain complex work.",
+    category: ["Brand identity design", "UX Research"],
     tint: "from-zinc-200 via-white to-slate-100",
   },
   {
     name: "Hotto",
-    category: "Consumer brand",
-    summary:
-      "A playful commerce refresh built to increase trust, recall and repeat purchase intent.",
+    category: ["Visual Storytelling", "Web & Mobile Design"],
     tint: "from-sky-100 via-white to-blue-50",
   },
 ];
@@ -132,29 +131,28 @@ export const pricingPlans = [
     name: "Starter",
     price: "$2500",
     tone: "bg-amber-200",
-    description:
-      "For teams that need sharp design support, one focused request at a time.",
+    description: "For companies who need design support. One request at a time",
     features: [
-      "Design updates every 2 days",
-      "Mid-level designer",
+      "Design Updates Every 2 Days",
+      "Mid-level Designer",
       "SEO optimization",
-      "Monthly analytics review",
-      "2 strategy calls per month",
-      "License-free assets",
+      "Monthly analytics",
+      "2x Calls Per Month",
+      "License free assets",
     ],
   },
   {
     name: "Pro",
     price: "$3800",
     tone: "bg-indigo-600 text-white",
-    description: "The best fit for MVPs, Web Apps or complex problems.",
+    description: "2x the speed. Great for an MVP, Web App or complex problem",
     features: [
-      "Design updates daily",
-      "Senior product designer",
-      "AI advisory framework",
-      "Full-service creative team",
-      "4 strategy calls per month",
-      "License-free assets",
+      "Design Updates Daily",
+      "Senior-level Designer",
+      "AI Advisory Framework",
+      "Full-service Creative Team",
+      "4x Calls Per Month",
+      "License free assets",
     ],
   },
 ];
@@ -180,6 +178,16 @@ export const faqs = [
     answer:
       "Yes. We often stay on for iteration sprints, analytics reviews and campaign refreshes once the first version is live.",
   },
+  {
+    question: "How often will I receive updates on my project?",
+    answer:
+      "You can expect regular progress updates throughout the week, with clear checkpoints for feedback, next steps and anything we need from your side to keep the project moving.",
+  },
+  {
+    question: "How do I get started with Awake Agency?",
+    answer:
+      "Start by sharing your goals, timeline and current materials. From there, we will recommend the right scope, outline the process and help you choose the plan that fits best.",
+  },
 ];
 
 export const awards = [
@@ -187,18 +195,18 @@ export const awards = [
     title: "Framer Awards",
     year: "2024",
     description:
-      "Recognized for polished interaction design and launch experiences that feel alive.",
+      "Celebrated for cutting-edge interaction design and seamless user experiences.",
   },
   {
     title: "Dribbble Awards",
     year: "2023",
     description:
-      "Celebrated for distinctive visual systems and strong storytelling across touchpoints.",
+      "Recognized for creative excellence and innovative design solutions.",
   },
   {
     title: "Awwwards Mention",
     year: "2022",
     description:
-      "Highlighted for creative direction, clarity of motion and conversion-minded craft.",
+      "Honored with the Best Website Design for creativity, usability, and innovation.",
   },
 ];

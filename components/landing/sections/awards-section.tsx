@@ -1,31 +1,42 @@
+import { AwardIcon, DribbleIcon, FramerIcon } from "@/public/icon";
 import { awards } from "../data";
-import { SectionHeading } from "../section-heading";
 
 export function AwardsSection() {
+  const awardIcons = [
+    <FramerIcon key="framer" />,
+    <DribbleIcon key="dribbble" />,
+    <AwardIcon key="award" />,
+  ];
+
   return (
     <section className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="Recognition"
-          title="Accolades that celebrate design excellence"
-          description="This section mirrors the three-card editorial rhythm from the Figma composition."
-        />
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {awards.map((award) => (
+        <h2 className="mx-auto max-w-[52rem] text-center text-[48px] leading-14 font-medium tracking-tight text-[#1B1D1E] dark:text-white">
+          Accolades and achievements celebrating our{" "}
+          <span className="font-instrument-serif font-normal italic">
+            design excellence
+          </span>
+        </h2>
+        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          {awards.map((award, index) => (
             <article
               key={award.title}
-              className="rounded-[2rem] border border-zinc-200 bg-white p-8 shadow-[0_20px_70px_rgba(15,23,42,0.05)] dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.015))] dark:shadow-[0_20px_55px_rgba(0,0,0,0.22)]"
+              className="flex min-h-88 flex-col rounded-4xl border border-zinc-200 bg-white p-8 shadow-[0_20px_70px_rgba(15,23,42,0.05)] transition-transform duration-300 hover:-translate-y-1 dark:border-white/10 dark:bg-[#1E2022] dark:shadow-[0_20px_55px_rgba(0,0,0,0.22)]"
             >
-              <div className="h-10 w-10 rounded-full bg-zinc-950/5 dark:bg-white/10" />
-              <h3 className="mt-10 text-2xl font-semibold text-zinc-950 dark:text-white">
+              <div className="inline-flex h-18 w-18 items-center justify-center rounded-3xl dark:bg-white">
+                {awardIcons[index] ?? <AwardIcon />}
+              </div>
+              <h3 className="mt-10 text-base tracking-tight text-[#1B1D1E] dark:text-white">
                 {award.title}
               </h3>
-              <p className="mt-4 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              <p className="mt-4 font-medium text-2xl text-[#1B1D1E] dark:text-white/60">
                 {award.description}
               </p>
-              <p className="mt-10 text-sm uppercase tracking-[0.24em] text-zinc-400 dark:text-zinc-500">
-                {award.year}
-              </p>
+              <div className="mt-auto pt-10">
+                <p className="text-base uppercase text-[#1B1D1E] dark:text-white/35">
+                  {award.year}
+                </p>
+              </div>
             </article>
           ))}
         </div>

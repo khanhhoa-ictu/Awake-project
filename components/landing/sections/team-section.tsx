@@ -1,9 +1,14 @@
 import Image from "next/image";
 
+import { LinkedinIcon, XIcon } from "@/public/icon";
+
 import { team } from "../data";
 
 export function TeamSection() {
-  const socialLinks = ["X", "in"];
+  const socialLinks = [
+    { label: "X", icon: <XIcon /> },
+    { label: "LinkedIn", icon: <LinkedinIcon /> },
+  ];
   const teamPortraits = [
     "/images/team2.png",
     "/images/team1.png",
@@ -15,24 +20,20 @@ export function TeamSection() {
     <section id="team" className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500 dark:text-zinc-400">
-            Team
-          </p>
-          <h2 className="mt-5 text-balance text-4xl font-semibold tracking-tighter text-zinc-950 dark:text-white sm:text-5xl lg:text-[4.2rem] lg:leading-[0.94]">
-            Meet the creative minds
-            <br />
-            behind{" "}
-            <span className="font-serif text-zinc-700 italic font-normal dark:text-zinc-200">
-              our success
-            </span>
+          <h2 className="mx-auto max-w-150 text-center text-[48px] leading-14 font-medium tracking-tight text-[#1B1D1E] dark:text-white">
+            Meet the{" "}
+            <span className="font-instrument-serif font-normal italic">
+              creative minds
+            </span>{" "}
+            behind our success
           </h2>
         </div>
         <div className="mt-16 grid gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-4">
           {team.map((member, index) => {
-            const displayName = member.name
-              .replace("Ana BeliÃ„â€¡", "Ana Belic")
-              .replace("Darko StankoviÃ„â€¡", "Darko Stankovic");
             const portrait = teamPortraits[index] ?? teamPortraits[0];
+            const displayName = member.name
+              .replace("Ana BeliÄ‡", "Ana Belic")
+              .replace("Darko StankoviÄ‡", "Darko Stankovic");
 
             return (
               <article key={member.name} className="group text-center">
@@ -49,19 +50,21 @@ export function TeamSection() {
                 </div>
 
                 <div className="px-2 pt-5">
-                  <h3 className="text-[1.05rem] font-medium tracking-[-0.03em] text-zinc-950 dark:text-white sm:text-[1.12rem]">
+                  <h3 className="text-xl font-medium tracking-[-0.03em] text-[#1B1D1E] dark:text-white sm:text-[24px]">
                     {displayName}
                   </h3>
-                  <p className="mt-1.5 text-sm text-zinc-500 dark:text-zinc-400">{member.role}</p>
-                  <div className="mt-4 flex items-center justify-center gap-4 text-sm text-zinc-500 dark:text-zinc-400">
-                    {socialLinks.map((label) => (
+                  <p className="mt-1.5 text-sm text-[#1B1D1E]/60 dark:text-zinc-400">
+                    {member.role}
+                  </p>
+                  <div className="mt-4 flex items-center justify-center gap-4 text-sm text-zinc-500 dark:text-zinc-300">
+                    {socialLinks.map((socialLink) => (
                       <a
-                        key={`${displayName}-${label}`}
+                        key={`${displayName}-${socialLink.label}`}
                         href="#contact"
-                        aria-label={`${displayName} social ${label}`}
+                        aria-label={`${displayName} social ${socialLink.label}`}
                         className="font-medium transition hover:text-zinc-950 dark:hover:text-white"
                       >
-                        {label}
+                        {socialLink.icon}
                       </a>
                     ))}
                   </div>
